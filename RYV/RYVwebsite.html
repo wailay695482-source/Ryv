@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryv Client</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+border-bottom:1px solid #222;
+}
+
+.logo{
+display:flex;
+align-items:center;
+font-size:22px;
+font-weight:bold;
+}
+
+.logo img{
+width:30px;
+margin-right:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+opacity:0.7;
+cursor:pointer;
+}
+
+nav a:hover{
+opacity:1;
+}
+
+/* SECTIONS */
+
+section{
+display:none;
+padding:80px;
+text-align:center;
+}
+
+.active{
+display:block;
+}
+
+/* HERO */
+
+.hero h1{
+font-size:50px;
+}
+
+.hero p{
+opacity:0.7;
+margin-top:10px;
+}
+
+/* BUTTON */
+
+.button{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:white;
+color:black;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+transition:0.2s;
+}
+
+.button:hover{
+transform:scale(1.05);
+}
+
+/* GRID */
+
+.grid{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+/* CARDS */
+
+.card{
+background:#111;
+border:1px solid #222;
+border-radius:12px;
+padding:30px;
+transition:0.2s;
+}
+
+.card:hover{
+border-color:#444;
+}
+
+.card p{
+opacity:0.7;
+margin-top:10px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid #222;
+opacity:0.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+<img src="logo.png">
+Ryv Client
+</div>
+
+<div>
+<a onclick="showTab('home')">Home</a>
+<a onclick="showTab('features')">Features</a>
+<a onclick="showTab('download')">Download</a>
+<a onclick="showTab('resource')">Resource Packs</a>
+</div>
+
+</nav>
+
+<!-- HOME -->
+
+<section id="home" class="active hero">
+
+<h1>Ryv Client</h1>
+<p>Clean • Smooth • Lightweight Minecraft Client</p>
+
+<a class="button">Download Client</a>
+
+</section>
+
+<!-- FEATURES -->
+
+<section id="features">
+
+<h1>Client Features</h1>
+
+<div class="grid">
+
+<div class="card">
+<h3>⚡ High Performance</h3>
+<p>Optimized for smooth FPS and minimal lag.</p>
+</div>
+
+<div class="card">
+<h3>🎮 PvP Features</h3>
+<p>Freelook, Toggle Sprint, Coordinates, and HUD mods.</p>
+</div>
+
+<div class="card">
+<h3>🧊 Clean UI</h3>
+<p>Minimal black and white interface.</p>
+</div>
+
+<div class="card">
+<h3>⚙ Custom Modules</h3>
+<p>Easily enable and configure modules.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- DOWNLOAD -->
+
+<section id="download">
+
+<h1>Download Ryv Client</h1>
+
+<p>Latest version of the Ryv Client.</p>
+
+<a class="button">Download v1.0</a>
+
+</section>
+
+<!-- RESOURCE PACKS -->
+
+<section id="resource">
+
+<h1>Ryvexion Resource Packs</h1>
+
+<p>Official texture packs designed for Ryv Client.</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>💧 Ryvexion Pack v1</h3>
+<p>Base pack with katana and scythes.</p>
+
+<a class="button"
+href="https://modrinth.com/resourcepack/ryvexion-pack-1.21.4"
+target="_blank">
+
+Download Pack
+
+</a>
+</div>
+
+<div class="card">
+<h3>⚔ Ryvexion Pack v2</h3>
+<p>Upgraded textures.</p>
+
+<a class="button"
+href="https://modrinth.com/resourcepack/ryvexion-pack-reimagined"
+target="_blank">
+
+Download Pack
+
+</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Ryv Client
+</footer>
+
+<script>
+
+function showTab(tab){
+
+document.querySelectorAll("section").forEach(section=>{
+section.classList.remove("active");
+});
+
+document.getElementById(tab).classList.add("active");
+
+}
+
+</script>
+
+</body>
+</html>
